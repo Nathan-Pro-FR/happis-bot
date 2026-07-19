@@ -31,4 +31,8 @@ jobs:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         # Ajoute ici tes autres variables si nécessaires (ex: FORTNITE_API_KEY)
+        GUILD_ID: ${{ secrets.GUILD_ID }}
+        WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        FORTNITE_API_KEY: ${{ secrets.FORTNITE_API_KEY }}
+        
       run: node deploy-commands.js
