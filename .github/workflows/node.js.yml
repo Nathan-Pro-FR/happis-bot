@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
+
+    - name: Configurer Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24.x'
+
+    - name: Installer les dépendances
+      run: npm ci
+
+    - name: Vérification de la syntaxe
+      run: node --check index.js
+
+    # On injecte les secrets secrets de GitHub pour tester le script de déploiement
+    - name: Tester le déploiement des commandes Slash
+      env:
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        # Ajoute ici tes autres variables si nécessaires (ex: FORTNITE_API_KEY)
+      run: node deploy-commands.js
