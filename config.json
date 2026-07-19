@@ -1,0 +1,66 @@
+{
+  "color": "#4A4A4A",
+  "clientOptions": {
+    "activity": "Surveiller les APIs | /help",
+    "status": "online"
+  },
+  "intervals": {
+    "apiCheckMs": 300000
+  },
+  "apis": {
+    "gaming": [
+      {
+        "id": "minecraft",
+        "name": "Minecraft Server API",
+        "url": "https://api.mcstatus.io/v2/status/java/",
+        "description": "Suivi de l'état de santé et des joueurs en ligne pour Minecraft."
+      },
+      {
+        "id": "fortnite",
+        "name": "Fortnite API",
+        "url": "https://fortnite-api.com/v2",
+        "description": "Statistiques des joueurs et boutique en ligne Fortnite."
+      },
+      {
+        "id": "apex",
+        "name": "Apex Legends Status API",
+        "url": "https://api.mozambiqueheere.com",
+        "description": "État des serveurs et rotations des cartes Apex Legends."
+      }
+    ],
+    "anime": [
+      {
+        "id": "jikan",
+        "name": "Jikan API (MyAnimeList)",
+        "url": "https://api.jikan.moe/v4",
+        "description": "Base de données ouverte pour l'univers des animés et mangas."
+      },
+      {
+        "id": "mangadex",
+        "name": "MangaDex API",
+        "url": "https://api.mangadex.org",
+        "description": "Recherche de fiches techniques et couvertures de mangas."
+      },
+      {
+        "id": "nekos",
+        "name": "Nekos.best API",
+        "url": "https://nekos.best/api/v2",
+        "description": "Générateur d'images et d'interactions visuelles de style animé."
+      }
+    ],
+    "utility": [
+      {
+        "id": "weather",
+        "name": "Weather API",
+        "url": "http://api.weatherapi.com/v1/current.json",
+        "description": "Service de prévisions météorologiques mondiales."
+      },
+      {
+        "id": "coingecko",
+        "name": "CoinGecko API",
+        "url": "https://api.coingecko.com/api/v3",
+        "description": "Suivi du cours des crypto-monnaies en temps réel."
+      }
+    ]
+  }
+}
