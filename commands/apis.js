@@ -17,7 +17,7 @@ module.exports = {
 
         const categories = config.apis;
 
-        // 2. Dictionnaire pour afficher de beaux titres et émojis pour chaque clé du JSON
+        // 2. Dictionnaire pour afficher de beaux titres et émojis pour chaque catégorie
         const categoryLabels = {
             gaming: '🎮 Catégorie : Gaming',
             anime: '🌸 Catégorie : Anime & Culture',
